@@ -34,13 +34,13 @@ jobs:
         #       apk add --update ansible
 
         - run:
-          name: Install dependencies
-          command: |
-            apk add --update ansible
-            apk add --update openssh-server
-            apk --no-cache add --virtual builds-deps build-base python3
-            pip install --upgrade pip && pip install --upgrade awscli
-            
+            name: Install dependencies
+            command: |
+              apk add --update ansible
+              apk add --update openssh-server
+              apk --no-cache add --virtual builds-deps build-base python3
+              pip install --upgrade pip && pip install --upgrade awscli
+
         - run:
             name: Run Playbook and Configure server
             command: |
