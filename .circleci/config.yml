@@ -32,12 +32,10 @@ jobs:
             name: Install Ansible
             command: | 
               apk add --update ansible
-              # Install Ansible
         - run:
             name: Run Playbook and Configure server
             command: |
               ansible-playbook -i inventory main-remote.yml
-              # Your command
 # Sequential workflow
 workflows:
   # Name the workflow
