@@ -62,6 +62,6 @@ workflows:
     jobs:
       # - create_infrastructure
       - configure_infrastructure
-      - smoke:
+      - smoke_test:
           requires:
             - configure_infrastructure
